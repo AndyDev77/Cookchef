@@ -1,17 +1,16 @@
 import styles from "./Recipe.module.scss";
-import recipe from "../assets/images/recette.jpg";
 
-const Recipe = () => {
+const Recipe = ({ title, image }) => {
   return (
     <div className={styles.recipe}>
       <div className={styles.imageContainer}>
-        <img src={recipe} alt="recette" />
+        <img src={image} alt="recette" />
       </div>
 
       <div
         className={`${styles.recipeTitle} d-flex flex-row align-items-center justify-content-center`}
       >
-        <h3>Saumon & Asperge</h3>
+        <h3>{title}</h3>
       </div>
     </div>
   );
